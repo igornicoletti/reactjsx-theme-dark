@@ -1,5 +1,6 @@
 # Theme Dark
 
+## Technologies
 Vite + React + Tailwindcss
 
 * [Getting Started | Vite](https://vitejs.dev/guide/)
