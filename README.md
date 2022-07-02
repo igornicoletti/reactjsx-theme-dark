@@ -2,9 +2,8 @@
 
 Vite + React + Tailwindcss
 
-[Getting Started | Vite](https://vitejs.dev/guide/)
-
-[Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app)
+*[Getting Started | Vite](https://vitejs.dev/guide/)
+*[Install Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app)
 
 ## Installation
 
