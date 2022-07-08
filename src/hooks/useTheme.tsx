@@ -4,19 +4,19 @@ interface ThemeProviderProps {
   children: ReactElement
 }
 
-type ThemeContextData = {
-  theme: boolean
-  setTheme: React.Dispatch<SetStateAction<boolean>>
+interface ThemeContextData {
+  isThemeMode: boolean
+  isSetThemeMode: React.Dispatch<SetStateAction<boolean>>
 }
 
 const ThemeContext = createContext({} as ThemeContextData)
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState(localStorage.theme === 'light')
+  const [isThemeMode, isSetThemeMode] = useState(localStorage.isThemeMode === 'light')
 
   useEffect(() => {
     const rootElement = window.document.documentElement
-    const currentTheme = theme
+    const currentTheme = isThemeMode
 
     const prevTheme = currentTheme ? 'dark' : 'light'
     rootElement.classList.remove(prevTheme)
@@ -24,11 +24,11 @@ export function ThemeProvider({ children }: ThemeProviderProps) {
     const nextTheme = currentTheme ? 'light' : 'dark'
     rootElement.classList.add(nextTheme)
 
-    localStorage.setItem('theme', nextTheme)
-  }, [theme])
+    localStorage.setItem('isThemeMode', nextTheme)
+  }, [isThemeMode])
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ isThemeMode, isSetThemeMode }}>
       {children}
     </ThemeContext.Provider>
   )

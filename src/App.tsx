@@ -1,13 +1,12 @@
 import { Theme } from './components/Theme'
-import { DarkMode } from './components/DarkMode'
-
+import { ThemeMode } from './components/ThemeMode'
 import { ThemeProvider } from './hooks/useTheme'
 
 function App() {
   return (
     <ThemeProvider>
       <>
-        <DarkMode />
+        <ThemeMode />
         <Theme />
       </>
     </ThemeProvider>
