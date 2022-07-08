@@ -4,10 +4,7 @@ import { useTheme } from '../../hooks/useTheme'
 
 export function ThemeMode() {
   const { isThemeMode, isSetThemeMode } = useTheme()
-
-  function handleToggleTheme() {
-    isSetThemeMode(!isThemeMode)
-  }
+  const handleToggleTheme = () => isSetThemeMode(!isThemeMode)
 
   return (
     <>
