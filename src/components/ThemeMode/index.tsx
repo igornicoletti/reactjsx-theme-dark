@@ -10,7 +10,7 @@ export function ThemeMode() {
     <>
       <button
         type="button"
-        title="Alternar tema"
+        title="Theme mode"
         onClick={handleToggleTheme}
         className="fixed top-0 right-0 p-5
         text-dark/50 dark:text-white/50 
