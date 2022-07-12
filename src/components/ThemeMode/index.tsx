@@ -8,27 +8,18 @@ export function ThemeMode() {
 
   return (
     <>
-      <div onClick={handleToggleTheme} className="fixed top-0 right-0 p-5">
-        {isThemeMode ? (
-          <button
-            type="button"
-            title="Dark mode"
-            className="text-dark/50 hover:text-dark focus-visible:text-dark
-            focus:outline-none focus-visible:outline-none
-            transition ease-in-out duration-250">
-            <Moon size={20} />
-          </button>
-        ) : (
-          <button
-            type="button"
-            title="Light mode"
-            className="text-white/50 hover:text-white focus-visible:text-white            
-            focus:outline-none focus-visible:outline-none
-            transition ease-in-out duration-250">
-            <SunDim size={20} />
-          </button>
-        )}
-      </div>
+      <button
+        type="button"
+        title="Alternar tema"
+        onClick={handleToggleTheme}
+        className="fixed top-0 right-0 p-5
+        text-dark/50 dark:text-white/50 
+        hover:text-dark dark:hover:text-white 
+        focus-visible:text-dark dark:focus-visible:text-white
+        transition ease-in-out duration-250
+        focus:outline-none focus-visible:outline-none">
+        {isThemeMode ? (<Moon size={20} />) : (<SunDim size={20} />)}
+      </button>
     </>
   )
 }
